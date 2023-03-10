@@ -48,11 +48,11 @@
 
 **特别说明**
 
-1、为什么要先卸载 TikTok，TikTok 会在第一次使用时触发限制，并导致之后无法通过 MiMt 解密。  
-2、所以先配置好规则之后，然后在下载 TikTok，减少重定向的请求次数，降低风险，延长规则的寿命。  
-3、为什么配置好之后还是无法使用，请检查软件的证书有没有安装，信任。 
-4、或者是 Https 解密（MiMt）与重写（Rewrite）有没有开启。  
-5、或者是软件是不是盗版，比如用共享 ID 下载的，有设备限制，是无法使用重写脚本功能的。  
+1、需要先卸载已安装的TikTok，因为TikTok 会在第一次使用时触发限制，并导致之后无法通过 MiMt 解密。  
+2、配置好VPN相关规则后再下载和启动 TikTok，以减少重新定向的请求次数，降低不可用的风险，延长规则的寿命。  
+3、如果配置好规则之后还是无法使用，请重新检查下VPN软件的证书是否正确安装和信任，如果没有可重复下安装步骤。  
+4、如果确认了第3步后还是不能使用，就再检查下 Https 解密（MiMt）与重写（Rewrite）有没有开启。  
+5、再则就再检查下相关软件是不是盗版，比如用共享 ID 下载的，有设备限制，是无法使用重写脚本功能的；同时，部分VPN节点也是有设备数量限制的。  
 
 ---
 
@@ -64,6 +64,8 @@
 * 解锁并换区：将`CN`改为想看的国家/地区的2位`大写`英文简写，
 
     * 在`HTTP复写`中，将`CN`的替换值改为`SG`、`MO`、`TW`等即可换区
+
+    * 或者可在`模块配置`中，选择相关区域的解锁配置即可，如`解锁美国`、`解锁日本`、`解锁韩国`、`解锁台湾`等即可换区
 
 
 **操作步骤**
@@ -246,19 +248,17 @@ https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Shadowrocket/TiK
 https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Shadowrocket/TikTok.list
 ```
 
+5、如果**TikTok仍然无法观看**，可以`hostname`中加上以下**两条**
+
+```
+-*snssdk.com, -*amemv.com
+```
+
 ---
 ### <a id="抓包降级"> 抓包降级 TikTok 21.1.0 </a>
 
 * [教程](https://semporia.github.io/iTunes.html)
 * [备用地址](https://semporia.blogspot.com/2022/06/tiktok-2110.html)
-
----
-### <a id="抖音"> 抖音無法觀看 </a>
-
-在hostname中加上以下兩條
-```
--*snssdk.com, -*amemv.com
-```
 
 ---
 ### <a id="抖音IP代理"> 抖音IP代理 </a>
